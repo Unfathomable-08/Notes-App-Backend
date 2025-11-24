@@ -21,6 +21,10 @@ app.options('*', (req, res) => {
 });
 app.use(express.json());
 
+app.get('/', (req, res) => {
+  res.send("hello!")
+})
+
 // Routes
 const notesRouter = require('./routes/notes');
 const userRouter = require('./routes/user');
